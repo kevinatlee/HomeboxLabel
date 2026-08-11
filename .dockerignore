@@ -1,0 +1,12 @@
+.git
+.github
+.gitignore
+README.md
+LICENSE
+__pycache__/
+*.py[cod]
+*.log
+.env
+.env.*
+venv/
+.venv/
