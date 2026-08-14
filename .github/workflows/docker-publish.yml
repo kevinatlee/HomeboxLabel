@@ -50,6 +50,7 @@ jobs:
           labels: |
             org.opencontainers.image.title=HomeboxLabel
             org.opencontainers.image.description=External Homebox label renderer with 4x6 location labels
+            org.opencontainers.image.licenses=MIT
 
       - name: Build and optionally publish
         uses: docker/build-push-action@v7
