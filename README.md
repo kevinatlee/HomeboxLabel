@@ -26,7 +26,9 @@ The published image targets `linux/amd64`.
 
 ## Unraid setup
 
-Create an Unraid Docker container using:
+HomeboxLabel includes an Unraid Community Apps template under `templates/homeboxlabel.xml`. Once the project is accepted into Community Apps, install it from the Apps tab and provide the public base URL of your Homebox instance when prompted.
+
+For a manual Unraid install, create a Docker container using:
 
 ```text
 Repository: ghcr.io/kevinatlee/homeboxlabel:latest
@@ -39,10 +41,10 @@ Host port:      9797
 Container port: 8787
 ```
 
-Add the following environment variable to the HomeboxLabel container:
+Add the following environment variable to the HomeboxLabel container, replacing the example with your own Homebox URL:
 
 ```text
-PUBLIC_BASE_URL=https://homebox.atlee.io
+PUBLIC_BASE_URL=https://homebox.example.com
 ```
 
 `PUBLIC_BASE_URL` is used when Homebox sends a relative QR target such as `/location/<id>`. The service converts it to a complete URL before generating the QR code.
@@ -53,13 +55,6 @@ Point Homebox's external label maker at HomeboxLabel:
 
 ```text
 HBOX_LABEL_MAKER_LABEL_SERVICE_URL=http://<UNRAID-IP>:9797/
-HBOX_LABEL_MAKER_LABEL_SERVICE_TIMEOUT=30s
-```
-
-For example, if Unraid is `10.10.10.10`:
-
-```text
-HBOX_LABEL_MAKER_LABEL_SERVICE_URL=http://10.10.10.10:9797/
 HBOX_LABEL_MAKER_LABEL_SERVICE_TIMEOUT=30s
 ```
 
@@ -89,6 +84,15 @@ Requests that are not identified as locations use the `Width` and `Height` value
 | `PUBLIC_BASE_URL` | Recommended | empty | Public Homebox base URL used to convert relative QR paths into complete URLs. |
 | `PORT` | No | `8787` | TCP port HomeboxLabel listens on inside the container. |
 
+## Community Apps repository metadata
+
+The repository contains the files required by the current Unraid Community Apps repository submission flow:
+
+- `LICENSE` — MIT license for the repository contents.
+- `ca_profile.xml` — Community Apps repository profile and support metadata.
+- `icon.svg` — project icon used by the repository profile and app template.
+- `templates/homeboxlabel.xml` — Unraid Docker application template.
+
 ## Local build
 
 ```bash
@@ -101,7 +105,7 @@ Run it with:
 docker run -d \
   --name HomeboxLabel \
   -p 9797:8787 \
-  -e PUBLIC_BASE_URL=https://homebox.atlee.io \
+  -e PUBLIC_BASE_URL=https://homebox.example.com \
   homeboxlabel:local
 ```
 
@@ -116,6 +120,10 @@ ghcr.io/kevinatlee/homeboxlabel:latest
 Version tags matching `v*.*.*` are also published. For example, Git tag `v1.0.0` produces an image tagged `v1.0.0` in GHCR.
 
 Pull requests build the Docker image for validation but do not publish it.
+
+## License
+
+HomeboxLabel is available under the MIT License. See `LICENSE` for details.
 
 ## Project status
 
