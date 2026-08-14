@@ -1,0 +1,8 @@
+<CommunityApplications>
+  <Profile>
+    HomeboxLabel is an external label-rendering service for Homebox. It generates tote-friendly 4 x 6 inch location labels while preserving compact item labels, including QR codes that link back to the corresponding Homebox record. Support and issue tracking are available through the project GitHub repository.
+  </Profile>
+  <Icon>https://raw.githubusercontent.com/kevinatlee/HomeboxLabel/main/icon.svg</Icon>
+  <WebPage>https://github.com/kevinatlee/HomeboxLabel</WebPage>
+  <Forum>https://github.com/kevinatlee/HomeboxLabel/issues</Forum>
+</CommunityApplications>
