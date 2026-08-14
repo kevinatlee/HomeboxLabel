@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">HomeboxLabel</title>
+  <desc id="desc">A shipping label with a QR-style mark and label lines.</desc>
+  <rect width="512" height="512" rx="96" fill="#ffffff"/>
+  <rect x="54" y="78" width="404" height="356" rx="34" fill="none" stroke="#111111" stroke-width="26"/>
+  <g fill="#111111">
+    <rect x="94" y="118" width="92" height="92" rx="8"/>
+    <rect x="112" y="136" width="56" height="56" rx="4" fill="#ffffff"/>
+    <rect x="126" y="150" width="28" height="28" rx="2"/>
+    <rect x="218" y="118" width="30" height="30"/>
+    <rect x="260" y="118" width="30" height="30"/>
+    <rect x="302" y="118" width="30" height="30"/>
+    <rect x="218" y="160" width="30" height="30"/>
+    <rect x="302" y="160" width="30" height="30"/>
+    <rect x="344" y="118" width="74" height="74" rx="8"/>
+    <rect x="360" y="134" width="42" height="42" rx="4" fill="#ffffff"/>
+    <rect x="372" y="146" width="18" height="18" rx="2"/>
+    <rect x="94" y="242" width="30" height="30"/>
+    <rect x="136" y="242" width="30" height="30"/>
+    <rect x="178" y="242" width="30" height="30"/>
+    <rect x="94" y="284" width="30" height="30"/>
+    <rect x="178" y="284" width="30" height="30"/>
+    <rect x="136" y="326" width="30" height="30"/>
+    <rect x="178" y="326" width="30" height="30"/>
+    <rect x="94" y="368" width="114" height="24" rx="8"/>
+    <rect x="238" y="244" width="176" height="26" rx="10"/>
+    <rect x="238" y="298" width="146" height="24" rx="10"/>
+    <rect x="238" y="350" width="176" height="24" rx="10"/>
+  </g>
+</svg>
